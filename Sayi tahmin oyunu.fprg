@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-08 11:43:39 &#214;S"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1SQ0pJVDU2OzIwMTktMTAtMDg7MTE6Mjg6MjYgw5ZTOzI2NDc="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1SQ0pJVDU2OzIwMTktMTAtMDg7MTE6NDM6Mzkgw5ZTOzE7Mjc1Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rastgele, tahmin, sayac" type="Integer" array="False" size=""/>
+            <assign variable="sayac" expression="0"/>
+            <assign variable="rastgele" expression="0"/>
+            <assign variable="tahmin" expression="0"/>
+            <output expression="rastgele" newline="True"/>
+            <output expression="&quot;bir tahmin giriniz&quot;" newline="True"/>
+            <do expression="tahmin!=rastgele">
+                <input variable="tahmin"/>
+                <if expression="tahmin != rastgele">
+                    <then>
+                        <if expression="tahmin&gt;rastgele">
+                            <then>
+                                <output expression="&quot;daha k&#252;&#231;&#252;k bir say&#305; tahmin ediniz.&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;daha b&#252;y&#252;k bir say&#305; tahmin ediniz.&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="sayac" expression="sayac + 1"/>
+            </do>
+            <output expression="rastgele &amp; &quot; sayisini &quot; &amp; sayac &amp; &quot; defada bildiniz. &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

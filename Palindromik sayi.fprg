@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="16"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-23 09:56:59 "/>
+        <attribute name="created" value="MTY7IFBDMTY7IDIwMTktMTAtMjM7IDA5OjA2OjQ3IDsgMTU4MA=="/>
+        <attribute name="edited" value="MTY7IFBDMTY7IDIwMTktMTAtMjM7IDA5OjU2OjU5IDsgMTU4OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text=" Kullan&#305;c&#305;n&#305;n girece&#287;i 5 basamakl&#305; say&#305;n&#305;n palindromik say&#305; olup olmad&#305;&#287;&#305;n&#305; bulan algoritmay&#305; haz&#305;rlay&#305;n&#305;z."/>
+            <declare name="birler, onlar, yuzler, binler, onbinler, sayi" type="Integer" array="False" size=""/>
+            <declare name="uzunluk" type="Integer" array="False" size=""/>
+            <do expression="uzunluk!=5">
+                <output expression="&quot;5 basamakli bir sayi giriniz.&quot;"/>
+                <input variable="sayi"/>
+                <assign variable="uzunluk" expression="Len(ToString(sayi))"/>
+                <if expression="uzunluk!=5">
+                    <then>
+                        <output expression="&quot;Sayi 5 basamakli degil. Tekrar sayi giriniz!&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="birler" expression="sayi%10"/>
+                        <assign variable="onlar" expression="(sayi/10)%10"/>
+                        <assign variable="yuzler" expression="(sayi/100)%10"/>
+                        <assign variable="binler" expression="(sayi/1000)%10"/>
+                        <assign variable="onbinler" expression="(sayi/10000)%10"/>
+                        <if expression="birler==onbinler">
+                            <then>
+                                <if expression="onlar==binler">
+                                    <then>
+                                        <output expression="&quot;sayi palindromiktir.&quot;"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;sayi palindromik de&#287;il.&quot;"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <output expression="&quot;sayi palindromik de&#287;il.&quot;"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

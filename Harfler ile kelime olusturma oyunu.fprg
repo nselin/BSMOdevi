@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-27 06:27:45 &#214;S"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1SQ0pJVDU2OzIwMTktMTAtMjI7MTE6MjY6NTEgw5ZTOzI2Mzk="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1SQ0pJVDU2OzIwMTktMTAtMjI7MTE6Mjc6MTMgw5ZTOzE7YWFndW47TEFQVE9QLVZKTVBMVFJUOzIwMTktMTAtMjI7MDI6MTc6NTkgw5ZTOzIyMTAyMDE5SGFyZlRvcGxhbWFBbGdvcml0bWFzYcSxLmZwcmc7OTM5MQ=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1SQ0pJVDU2OzIwMTktMTAtMjc7MDY6Mjc6NDUgw5ZTOzM7Mjc2Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="klavyeden H girilene kadar harflari (tek karakter) kelime olarak olu&#351;turan ve yazd&#305;ran algoritma &#13;&#10;&#13;&#10;k-&#305;-r-p-H &gt;&gt;&gt;&gt; k&#305;rp&#13;&#10;"/>
+            <declare name="kelime, harf" type="String" array="False" size=""/>
+            <assign variable="harf" expression="&quot;E&quot;"/>
+            <assign variable="kelime" expression="&quot; &quot;"/>
+            <output expression="&quot;Gireceginiz harfler ile kelime olusturmak icin her seferinde tek harf girmeniz gerekmektedir. Kelimenizi olusturduktan sonra islemi tamamlamak icin 'H' harfini girmelisiniz.&quot;" newline="True"/>
+            <while expression="harf!=&quot;H&quot;">
+                <output expression="&quot;Harf giriniz.&quot;" newline="True"/>
+                <input variable="harf"/>
+                <if expression="Len(harf)&gt;1">
+                    <then>
+                        <output expression="&quot;tek karakter giriniz&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="harf==&quot;H&quot;">
+                            <then/>
+                            <else>
+                                <assign variable="kelime" expression="kelime&amp;harf"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;kelimeniz: &quot;&amp;kelime" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="16"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-02 09:56:24 "/>
+        <attribute name="created" value="MTY7IFBDMTY7IDIwMTktMTAtMDI7IDA5OjEzOjA1IDsgMTU2OQ=="/>
+        <attribute name="edited" value="MTY7IFBDMTY7IDIwMTktMTAtMDI7IDA5OjU2OjI0IDsgMTU3Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Girilen bir say&#305;n&#305;n pozitif, negatif yada s&#305;f&#305;r olup olmad&#305;&#287;&#305;n&#305; kontrol ederek  her bir ihtimal i&#231;in ekrana &#231;&#305;kt&#305; veren algoritmay&#305; yaz&#305;n&#305;z."/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="0"/>
+            <output expression="&quot;bir say&#305; giriniz&quot;"/>
+            <input variable="a"/>
+            <if expression="a&gt;0">
+                <then>
+                    <output expression="&quot;say&#305; pozitiftir.&quot;"/>
+                </then>
+                <else>
+                    <if expression="a&lt;0">
+                        <then>
+                            <output expression="&quot;say&#305; negatiftir&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="a=0">
+                                <then>
+                                    <output expression="&quot;say&#305; 0'a e&#351;ittir&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
